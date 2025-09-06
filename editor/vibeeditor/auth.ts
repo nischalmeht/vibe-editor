@@ -14,6 +14,7 @@ export const { auth, handlers, signIn, signOut } = NextAuth({
      * Handle user creation and account linking after a successful sign-in
      */
     async signIn({ user, account, profile }) {
+      console.log("SignIn callback called with:", { user,  });
       if (!user || !account) return false;
 
       // Check if the user already exists
